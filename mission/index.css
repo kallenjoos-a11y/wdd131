@@ -1,0 +1,38 @@
+img{
+    width: 20%;
+    display: block;
+    margin: 50px auto;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}
+h3 {
+    color: blue;
+    border-bottom: 1px solid black; 
+    padding-bottom: 5px; 
+    text-align: center;
+}
+
+h1, h3 {
+    font-family: 'Times New Roman', serif;
+}
+p,ol li{
+    font-family: Arial, sans-serif;
+}
+
+ol li{
+    line-height: 1.5em;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#mission-statement {
+    font-style: italic;
+}
+#content{
+    max-width: 500px;
+    margin: 50px auto;
+    border: 1px solid black;
+    padding: 50px;
+}
