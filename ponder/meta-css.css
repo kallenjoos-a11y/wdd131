@@ -42,3 +42,8 @@ h2{
     color: #fff000;
     -webkit-text-stroke: 2px black;
 }
+          
+.special {
+    color: burgundy;
+    font-size: 5em;
+}
