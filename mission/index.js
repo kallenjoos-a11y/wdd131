@@ -16,12 +16,14 @@ function changeTheme() {
         border.style.borderColor = "white";
         underline.style.borderBottom = "1px solid white";
         img.src = "byui-logo-white.png";
+        document.querySelector("h3").style.color = "#4f9bff";
     } else {
         document.body.style.backgroundColor = "white";
         document.body.style.color = "black";
         border.style.borderColor = "black";
         underline.style.borderBottom = "1px solid black";
         img.src = "https://wddbyui.github.io/wdd131/images/byui-logo-blue.webp";
+        document.querySelector("h3").style.color = "#0000ff";
     }
 }           
                     
