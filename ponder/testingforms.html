@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Playground</title>
+</head>
+<body>
+    <form>
+        <label for="ssn">Enter your social security number. It's safe here.</label>
+        <input type="text" id="ssn" required maxlength="9" minlength="9">
+
+        <input type="file" name="ssnImg">
+
+        <input type="password" name="mostCommonPassword">
+
+        <input type="tel" name="number">
+        <input type="button">
+        <input type="image">
+        <input type="checkbox">
+        <input type="submit">
+    </form>
+
+    <script>
+        const input = document.getElementById('ssn');
+
+        input.addEventListener('input', (e) => {
+            // 1. Remove all existing hyphens and non-alphanumeric characters
+            let value = e.target.value.replace(/[^A-Za-z0-9]/g, '');
+            
+            // 2. Break the string into chunks of 4 characters
+            let matches = value.match(/.{1,4}/g);
+
+            // 3. Join those chunks back together with a hyphen
+            if (matches) {
+                e.target.value = matches.join('-');
+            } else {
+                e.target.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
