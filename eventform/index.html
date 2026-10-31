@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Event Ticket</title>
-  <link rel="icon" href="favicon.ico"> 
+  <link rel="icon" href="favicon-96.png"> 
   <link rel="stylesheet" href="form.css" />
   <script src="form.js" defer></script>
 </head>
@@ -38,8 +38,8 @@
           required
         >
           <option value="">Choose One</option>
-          <option value="one">Student</option>
-          <option value="many">Guest</option>
+          <option value="student">Student</option>
+          <option value="guest">Guest</option>
         </select>
       </div>
 
@@ -49,8 +49,8 @@
       </div>
 
       <div id="notesContainer" class="field full" hidden>
-        <label for="notes">Travel Notes</label>
-        <input id="notes" name="notes" type="text" />
+        <label id="iNumLabel" for="iNum"></label>
+        <input id="iNum" name="iNum" type="text" />
       </div>
 
       <button class="full" type="submit">Create Ticket</button>
