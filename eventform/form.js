@@ -10,15 +10,15 @@ function updateINum() {
   const value = customerType.value;
 
   if(value == "student"){
-    notesContainer.removeAttribute("hidden");
+    notesContainer.hidden = false;
     iNumLabel.textContent = "Student I#";
     iNum.required = true;
   } else if(value == "guest"){
-    notesContainer.removeAttribute("hidden");
+    notesContainer.hidden = false;
     iNumLabel.textContent = "Access Code";
     iNum.required = true;
   } else {
-    notesContainer.setAttribute("hidden");
+    notesContainer.hidden = true;
     iNumLabel.textContent = "";
     iNum.required = false;
   }
