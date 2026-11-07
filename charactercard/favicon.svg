@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Character card icon</title>
+  <rect width="64" height="64" rx="14" fill="#313131"/>
+  <rect x="12" y="10" width="40" height="44" rx="7" fill="#5d747b"/>
+  <circle cx="32" cy="26" r="9" fill="#f0f4f8"/>
+  <path d="M19 46c1.8-7 6.1-10.5 13-10.5S43.2 39 45 46" fill="#f0f4f8"/>
+  <circle cx="28.5" cy="25" r="1.5" fill="#313131"/>
+  <circle cx="35.5" cy="25" r="1.5" fill="#313131"/>
+</svg>
