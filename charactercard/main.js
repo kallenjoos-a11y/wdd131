@@ -37,7 +37,7 @@ const card = document.querySelector(".card");
 characters.forEach((item, index) => {
     let articleDiv = `
     <div class="character-card" id="char-${index}">
-        <img src="${item.imgUrl}" id="card-img" alt="Profile image for the card">
+        <img src="${item.imgUrl}" width="400" height="400" alt="Profile image of ${item.name}" loading="${index === 0 ? 'eager' : 'lazy'}" fetchpriority="${index === 0 ? 'high' : 'auto'}">
         <h1 class="name">${item.name}</h1>
         <div class="stats">
             <p class="class">Class: ${item.class}</p>
@@ -46,7 +46,7 @@ characters.forEach((item, index) => {
         </div>
         <div class="buttons">
             <button class="attacked" type="button">Attacked</button>
-            <button class="lvlup" ßtype="button">Level Up</button>
+            <button class="lvlup" type="button">Level Up</button>
         </div>
     </div>
     `;
