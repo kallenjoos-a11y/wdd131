@@ -23,23 +23,43 @@
 
     <!-- One Apple Touch Icon (iOS home screen) -->
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
                 
 </head>
 <body>
-    
-    <span
-    class="rating"
-    role="img"
-    aria-label="Rating: 4 out of 5 stars"
-    >
-        <span aria-hidden="true" class="icon-star">⭐</span>
-        <span aria-hidden="true" class="icon-star">⭐</span>
-        <span aria-hidden="true" class="icon-star">⭐</span>
-        <span aria-hidden="true" class="icon-star">⭐</span>
-        <span aria-hidden="true" class="icon-star-empty">☆</span>
-    </span>
-                     
-                
+    <header>
+        <img src="images/recipe-book.png" alt="recipe icon">
+        <h1>Recipe Book</h1>
+    </header>
+
+    <form class="search-bar" role="search">
+        <input type="search" id="search" name="search" placeholder="Search recipes...">
+        <button type="submit" aria-label="Search">
+            <img src="images/search.svg" alt="">
+        </button>
+    </form>
+
+    <article class="card">
+        <img src="images/apple-crisp.jpg" alt="Apple Crisp">
+
+        <div class="recipe-info">
+            <form class="recipe-categories">
+                <input type="text" name="category" value="dessert">
+            </form>
+            <h2>Apple Crisp</h2>
+            <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star-empty">☆</span>
+            </span>
+            <p class="hide-description">This apple crisp is a delicious and easy-to-make dessert that's perfect for fall.</p>
+        </div>
+    </article>            
     <footer>
         <div class="social">
             <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
@@ -47,7 +67,7 @@
             <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
             <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
             </div>    
-        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>                            
+        <a class="footer-link" href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>                            
     </footer>
 </body>
 </html>
