@@ -280,26 +280,60 @@ const recipes = [
 		rating: 4
 	}
 ]            
+function displayRecipes(recipeList) {
+	card.innerHTML = recipeList.map(function (item) {
+		const fullStars = Math.floor(item.rating);
+		const emptyStars = 5 - fullStars;
 
-const card = document.querySelector(".card");
+		return `
+			<article class="card">   
+				<img src="${item.image}" alt="Photo of ${item.name}">
+				<div class="recipe-info">
+					<form class="recipe-categories">
+						${item.tags.map(tag => `<input type="text" name="category" value="${tag}" size="${tag.length}" readonly>`)
+					.join('')}
+					</form>
+					<h2>${item.name}</h2>
+					<span class="rating" role="img" aria-label="Rating: ${item.rating} out of 5 stars">
+						${'<span aria-hidden="true" class="icon-star">⭐</span>'.repeat(fullStars)}
+						${'<span aria-hidden="true" class="icon-star-empty">☆</span>'.repeat(emptyStars)}
+					</span>
+					<p class="hide-description">${item.description}</p>
+				</div>
+			</article>
+		`;
+	}).join('');
+}
 
-recipes.forEach((item, index) => {
-    let articleDiv = `
-    <img src="${item.image}" alt="Profile image of ${item.name}">
-    <div class="recipe-info">
-        <form class="recipe-categories">
-            <input type="text" name="category" value="dessert">
-        </form>
-        <h2>${item.name}</h2>
-        <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-        <span aria-hidden="true" class="icon-star">⭐</span>
-        <span aria-hidden="true" class="icon-star">⭐</span>
-        <span aria-hidden="true" class="icon-star">⭐</span>
-        <span aria-hidden="true" class="icon-star">⭐</span>
-        <span aria-hidden="true" class="icon-star-empty">☆</span>
-        </span>
-        <p class="hide-description">${item.description}</p>
-    </div>
-    `;
-    card.innerHTML += articleDiv;
-})
+function search() {
+	const recipeQuery = input.value.trim().toLowerCase();
+
+	const filteredRecipes = recipes.filter(function (recipe) {
+		const searchableText = [
+			recipe.name,
+			recipe.author,
+			recipe.description,
+			recipe.tags,
+			recipe.recipeIngredient,
+			recipe.recipeInstructions
+		].flat().join(' ').toLowerCase();
+
+		return searchableText.includes(recipeQuery);
+	});
+
+	displayRecipes(filteredRecipes);
+}
+
+const input = document.querySelector("#search");
+const card = document.querySelector("#recipe-grid");
+const searchBar = document.querySelector(".search-bar");
+
+searchBar.addEventListener('submit', function (event) {
+	event.preventDefault();
+	search();
+});
+
+input.addEventListener('input', search);
+	const randomRecipe = recipes[Math.floor(Math.random() * recipes.length)];
+
+	displayRecipes([randomRecipe]);
