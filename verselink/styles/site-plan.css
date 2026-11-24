@@ -1,3 +1,6 @@
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a | */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap");
 
 :root {
@@ -7,15 +10,19 @@
   --accent1-color: #8B635C;
   --accent2-color: #38564A;
 
-  /* Serif headings with clean, readable body text and navigation. */
+  /* change the values below to your chosen font(s) */
   --heading-font: "Libre Baskerville", Georgia, serif;
   --paragraph-font: Lato, Helvetica, sans-serif;
 
-  /* Navy text on cream; cream text on navy navigation. */
-  --headline-color-on-white: var(--primary-color);
-  --headline-color-on-color: var(--secondary-color);
-  --paragraph-color-on-white: var(--primary-color);
-  --paragraph-color-on-color: var(--secondary-color);
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: var(
+    --primary-color
+  ); /* headlines on a white background */
+  --headline-color-on-color: var(--secondary-color); /* headlines on a colored background */
+  --paragraph-color-on-white: var(
+    --primary-color
+  ); /* paragraph text on a white background */
+  --paragraph-color-on-color: var(--secondary-color); /* paragraph text on a colored background */
   --paragraph-background-color: var(--primary-color);
   --nav-link-color: var(--secondary-color);
   --nav-background-color: var(--primary-color);
@@ -23,24 +30,22 @@
   --nav-hover-background-color: var(--accent2-color);
 }
 
-/* Site plan presentation. */
-
-* { box-sizing: border-box; }
+/*  Look around below...but DON'T CHANGE ANYTHING! */
 
 body {
   max-width: 1200px;
   margin: 0 auto;
   padding: clamp(1rem, 4vw, 4rem);
-  background: var(--secondary-color);
-  color: var(--paragraph-color-on-white);
+  font-size: 18px;
   font-family: var(--paragraph-font);
   line-height: 1.6;
-  font-size: 18px;
+  background-color: var(--secondary-color);
+  color: var(--paragraph-color-on-white);
 }
 img {
-  display: block;
   max-width: 100%;
   height: auto;
+  display: block;
   margin: 0 auto;
 }
 h1,
@@ -64,7 +69,7 @@ header {
   padding: 1em;
   text-align: center;
   color: var(--paragraph-color-on-color);
-  background-color: var(--paragraph-background-color);
+  background-color: var(--accent1-color);
 }
 header > h1,
 header > h2 {
@@ -79,18 +84,16 @@ p {
 .colors {
   width: 100%;
   table-layout: fixed;
-  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  overflow-wrap: anywhere;
   margin: 30px auto;
   text-align: center;
 }
 .colors th {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: #999;
 }
 .colors td {
   width: 25%;
   height: 3em;
-  padding: 0.5rem;
 }
 
 .primary, .accent1, .accent2 {
@@ -118,11 +121,12 @@ p.colored {
 nav {
   background-color: var(--nav-background-color);
   line-height: 3em;
-  padding: 0.5rem;
   text-align: center;
   font-size: 1.2em;
 }
 nav {
+  font-family: var(--paragraph-font);
+  flex-wrap: wrap;
   list-style-type: none;
   display: flex;
 }
@@ -160,19 +164,16 @@ nav a:hover {
   grid-area: home;
   background-color: #ccc;
   line-height: 3em;
-  padding: 0.5rem;
 }
 .sm-page2 {
   grid-area: page2;
   background-color: #ccc;
   line-height: 3em;
-  padding: 0.5rem;
 }
 .sm-page3 {
   grid-area: page3;
   background-color: #ccc;
   line-height: 3em;
-  padding: 0.5rem;
 }
 
 .top {
@@ -191,15 +192,3 @@ nav a:hover {
   border-top: 1px solid;
   border-right: 1px solid;
 }
-
-.brand-logo { width: min(100%, 24rem); }
-header .brand-logo { background: var(--secondary-color); margin-bottom: 1.5rem; }
-.palette-link { overflow-wrap: anywhere; }
-.type-sample { border-left: 3px solid var(--accent1-color); padding-left: 1rem; }
-.navigation-sample { list-style: none; padding: 0; display: grid; gap: 1rem; }
-.navigation-sample li {
-  display: flex; justify-content: space-between; gap: 1rem;
-  padding: 1rem 1.5rem; color: var(--nav-link-color);
-  background: var(--nav-background-color); font-size: clamp(1rem, 3vw, 1.5rem);
-}
-.wireframe { width: min(100%, 32rem); }
