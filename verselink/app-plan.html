@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+		<meta charset="utf-8">
+		<title>VerseLink Site Plan</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="images/Navy Bookmark with Open Book-2.png">
+		<link type="text/css" rel="stylesheet" href="styles/site-plan.css">
+	</head>
+
+	<body>
+		<header>
+			<img class="brand-logo" src="images/VerseLink Open Book Logo-1.png" alt="VerseLink — bookmark and open book" width="2172" height="724">
+            <h1>VerseLink Project Plan</h1>
+			<h2>Kallen Joos</h2>
+			<h2>WDD 131</h2>
+			<!-- In the header above, add the name or your site, your name and class number. For example if you are in section 3 you would put WDD 131.03 -->
+		</header>
+		<main>
+			
+			<hr>
+			<h2>Overview</h2>
+			<h3>Purpose</h3>
+			<p>The purpose of my website is to provide a modern scripture research tool that allows users to explore connections between scriptures, general conference talks, historical Church teachings, and their own personal study notes.</p>
+			<!-- change this -->
+
+			<h3>Audience</h3>
+			<p>My intended audience is members of The Church of Jesus Christ of Latter-day Saints and anyone interested in studying the scriptures more deeply. The site will make scripture research easier and more organized by bringing relevant references and personal insights together in one place.</p>
+			<!-- change this -->
+
+			<h3>Dynamic elements</h3>
+			<p>I will use JavaScript to make my website interactive and improve the user experience. JavaScript will allow users to navigate between scripture books and chapters, select individual verses, and open dynamic side panels displaying related general conference talks and historical references. Users will also be able to filter and search citations, expand or collapse sections, and switch between different sources without reloading the entire page. Additionally, JavaScript will help manage personal study notes and dynamically display journal entries connected to specific scriptures.</p>
+			<!-- change this -->
+
+			<hr>
+			<h2>Branding</h2>
+			<h3>Website Logo</h3>
+			<!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
+			<img class="brand-logo" src="images/VerseLink Open Book Logo-1.png" alt="VerseLink: navy bookmark and open book beside a serif wordmark" width="2172" height="724">
+            <p>The horizontal logo is used in the header. The matching square bookmark icon is used for the browser favicon.</p>
+			<hr>
+			<h2>Style Guide</h2>
+
+			<h3>Color Palette</h3>
+			<!--  The colors you choose for a website are one of the most important decisions you will make. Follow the instructions on the activity in iLearn then return and replace the color codes below with the hex color codes (the 6 digit numbers that show at the bottom of each color) for the colors you have chosen below.  You should have at least 2 colors but do not have to fill in all 4 if you do not need them.  -->
+
+			<!-- Copy and paste the URL to your finished palette below Make sure to paste it into both spots -->
+			Palette URL:
+			<a class="palette-link" href="https://coolors.co/263b53-f3f0e8-8b635c-38564a" target="_blank">https://coolors.co/263b53-f3f0e8-8b635c-38564a</a>
+
+			<table class="colors">
+				<tbody>
+					<tr>
+						<th>Primary</th>
+						<th>Secondary</th>
+						<th>Accent 1</th>
+						<th>Accent 2</th>
+					</tr>
+					<!-- Replace the numbers in the boxes below with your hex color codes. Then switch to the site-plan.css file and change your colors there as well. -->
+					<tr>
+						<td class="primary">[#263B53]</td>
+						<td class="secondary">[#F3F0E8]</td>
+						<td class="accent1">[#8B635C]</td>
+						<td class="accent2">[#38564A]</td>
+					</tr>
+				</tbody>
+			</table>
+
+			
+
+            <h3>Color usage</h3>
+            <p>Warm cream (#F3F0E8) is the page background. Deep navy (#263B53) is used for headings, body text, and the three main navigation options. Navigation labels are cream. Muted brown (#8B635C) frames the header and footer in the mockup and provides small decorative accents. Forest green (#38564A) is reserved for hover and selected states. Small text on the brown accent should be cream.</p>
+            <h3>Typography</h3>
+            <p><strong>Headings: Libre Baskerville.</strong> Its traditional serif shapes complement the VerseLink wordmark and give the site a quiet, book-like character. Use regular weight for large headings and bold for smaller section headings. Georgia is the fallback font.</p>
+            <p><strong>Body text and navigation: Lato.</strong> Use regular weight for paragraphs and large navigation labels, and bold for short labels that need emphasis. Keep body text at least 18px with a line height of 1.6 for comfortable reading. Helvetica and sans-serif are the fallback fonts.</p>
+            <div class="type-sample">
+                <h2>Study scripture. Discover connections.</h2>
+                <p>Explore scriptures, related general conference teachings, and your personal study notes.</p>
+            </div>
+            <h3>Navigation style sample</h3>
+            <p>The landing page presents three clear choices. These are visual samples of the planned navigation.</p>
+            <ul class="navigation-sample" aria-label="Planned landing page navigation">
+                <li>General Conference <span aria-hidden="true">›</span></li>
+                <li>Scriptures <span aria-hidden="true">›</span></li>
+                <li>Personal Notes <span aria-hidden="true">›</span></li>
+            </ul>
+
+			<h3>Pseudocode for your project</h3>
+
+			<p>
+				Home page loads ->
+                The user clicks on some type of scripture. ->
+                It then goes to sub categories (if they picked Book of Mormon, the sub category is Alma) which are retrieved from an API and stored as objects. ->
+                The user goes through any other sub categories to get to the scripture they're seeking. ->
+                The user then can click on a verse and see other scriptures that reference it. ->
+                My first goal is to start working on it with just one book of scripture.
+			</p>
+
+			<h3>Wireframes</h3>
+			<p>
+				Create wireframes for your project page(s). One for each page and list them
+				here. 
+			</p>
+
+			<h3>Landing page</h3>
+			<p>
+				The landing page offers General Conference, Scriptures, and Personal Notes. In this example, the user chooses General Conference.
+			</p>
+			<img class="wireframe" src="images/Screenshot 2026-11-24 at 11.10.47 AM.png" alt="home page wireframe">
+
+			<h3>Next Page</h3>
+			<p>
+				We can then click on one of the options of which talk year.
+			</p>
+			<img class="wireframe" src="images/Screenshot 2026-11-24 at 12.13.15 PM.png" alt="page 2 wireframe">
+
+            <h3>Next Page</h3>
+			<p>
+				We can then click on one of the talks given that year.
+			</p>
+			<img class="wireframe" src="images/Screenshot 2026-11-24 at 12.13.37 PM.png" alt="page 2 wireframe">
+
+            <h3>Next Page</h3>
+			<p>
+				We can then click on a specific paragraph to access more insights about that paragraph
+			</p>
+			<img class="wireframe" src="images/Screenshot 2026-11-24 at 12.13.46 PM.png" alt="page 2 wireframe">
+		</main>
+	
+
+</body></html>
